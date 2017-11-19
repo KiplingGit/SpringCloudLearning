@@ -2,6 +2,7 @@ package com.forezp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
@@ -9,10 +10,17 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
+/**
+ * 在主程序启动类中加入@EnableHystrixDashboard和@EnableCircuitBreaker注解，开启hystrixDashboard
+ * 
+ * @author Kipling
+ *
+ */
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableHystrix
 @EnableHystrixDashboard
+@EnableCircuitBreaker
 public class ServiceRibbonApplication {
 
 	public static void main(String[] args) {

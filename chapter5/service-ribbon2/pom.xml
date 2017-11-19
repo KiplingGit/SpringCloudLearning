@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.forezp</groupId>
-	<artifactId>service-ribbon</artifactId>
+	<artifactId>service-ribbon2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
@@ -30,7 +30,6 @@
 			<artifactId>spring-cloud-starter-hystrix</artifactId>
 		</dependency>
 
-        <!-- Hystrix 仪表盘 开始-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
@@ -40,9 +39,6 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
 		</dependency>
-		
-		<!-- ystrix 仪表盘 结束 -->
-		
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka</artifactId>
